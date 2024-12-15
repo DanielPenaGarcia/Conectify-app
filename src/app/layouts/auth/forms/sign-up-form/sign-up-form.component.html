@@ -1,0 +1,221 @@
+<form [formGroup]="signUpForm">
+  <!-- Step 1 -->
+  <div class="step" [ngClass]="{ active: step === 1 }">
+    <!-- Nombre -->
+    <div class="form-group">
+      <label for="name">Nombre</label>
+      <input
+        type="text"
+        formControlName="name"
+        class="form-control"
+        id="name"
+        placeholder="Ingresa tu nombre"
+      />
+      <div
+        class="form-errors"
+        *ngIf="
+          signUpForm.controls['name'].invalid &&
+          (signUpForm.controls['name'].dirty ||
+            signUpForm.controls['name'].touched)
+        "
+      >
+        <div *ngIf="signUpForm.controls['name'].errors['required']">
+          El nombre es obligatorio
+        </div>
+        <div *ngIf="signUpForm.controls['name'].errors['minlength']">
+          El nombre debe tener al menos 3 caracteres
+        </div>
+        <div *ngIf="signUpForm.controls['name'].errors['maxlength']">
+          El nombre debe tener como máximo 50 caracteres
+        </div>
+      </div>
+    </div>
+
+    <!-- Apellidos -->
+    <div class="form-group">
+      <label for="lastNames">Apellidos</label>
+      <input
+        type="text"
+        formControlName="lastNames"
+        class="form-control"
+        id="lastNames"
+        placeholder="Ingresa tus apellidos"
+      />
+      <div
+        class="form-errors"
+        *ngIf="
+          signUpForm.controls['lastNames'].invalid &&
+          (signUpForm.controls['lastNames'].dirty ||
+            signUpForm.controls['lastNames'].touched)
+        "
+      >
+        <div *ngIf="signUpForm.controls['lastNames'].errors['required']">
+          Los apellidos son obligatorios
+        </div>
+        <div *ngIf="signUpForm.controls['lastNames'].errors['minlength']">
+          Los apellidos deben tener al menos 3 caracteres
+        </div>
+        <div *ngIf="signUpForm.controls['lastNames'].errors['maxlength']">
+          Los apellidos deben tener como máximo 50 caracteres
+        </div>
+      </div>
+    </div>
+
+    <!-- Teléfono -->
+    <div class="form-group">
+      <label for="phone">Teléfono</label>
+      <input
+        type="text"
+        formControlName="phone"
+        class="form-control"
+        id="phone"
+        placeholder="Ingresa tu teléfono"
+      />
+      <div
+        class="form-errors"
+        *ngIf="
+          signUpForm.controls['phone'].invalid &&
+          (signUpForm.controls['phone'].dirty ||
+            signUpForm.controls['phone'].touched)
+        "
+      >
+        <div *ngIf="signUpForm.controls['phone'].errors['required']">
+          El teléfono es obligatorio
+        </div>
+        <div *ngIf="signUpForm.controls['phone'].errors['minlength']">
+          El teléfono debe tener al menos 8 caracteres
+        </div>
+        <div *ngIf="signUpForm.controls['phone'].errors['maxlength']">
+          El teléfono debe tener como máximo 20 caracteres
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Step 2 -->
+  <div class="step" [ngClass]="{ active: step === 2 }">
+    <!-- Correo electrónico -->
+    <div class="form-group">
+      <label for="email">Correo electrónico</label>
+      <input
+        type="email"
+        formControlName="email"
+        class="form-control"
+        id="email"
+        placeholder="Ingresa tu correo electrónico"
+      />
+      <div
+        class="form-errors"
+        *ngIf="
+          signUpForm.controls['email'].invalid &&
+          (signUpForm.controls['email'].dirty ||
+            signUpForm.controls['email'].touched)
+        "
+      >
+        <div *ngIf="signUpForm.controls['email'].errors['required']">
+          El correo electrónico es obligatorio
+        </div>
+        <div *ngIf="signUpForm.controls['email'].errors['email']">
+          El formato del correo electrónico es inválido
+        </div>
+        <div *ngIf="signUpForm.controls['email'].errors['maxlength']">
+          El correo electrónico debe tener como máximo 50 caracteres
+        </div>
+      </div>
+    </div>
+
+    <!-- Contraseña -->
+    <div class="form-group">
+      <label for="password">Contraseña</label>
+      <input
+        type="password"
+        formControlName="password"
+        class="form-control"
+        id="password"
+        placeholder="Ingresa tu contraseña"
+      />
+      <div
+        class="form-errors"
+        *ngIf="
+          signUpForm.controls['password'].invalid &&
+          (signUpForm.controls['password'].dirty ||
+            signUpForm.controls['password'].touched)
+        "
+      >
+        <div *ngIf="signUpForm.controls['password'].errors['required']">
+          La contraseña es obligatoria
+        </div>
+        <div *ngIf="signUpForm.controls['password'].errors['minlength']">
+          La contraseña debe tener al menos 8 caracteres
+        </div>
+        <div *ngIf="signUpForm.controls['password'].errors['maxlength']">
+          La contraseña debe tener como máximo 20 caracteres
+        </div>
+      </div>
+    </div>
+
+    <!-- Confirmación de contraseña -->
+    <div class="form-group">
+      <label for="passwordConfirmation">Confirmación de contraseña</label>
+      <input
+        type="password"
+        formControlName="passwordConfirmation"
+        class="form-control"
+        id="passwordConfirmation"
+        placeholder="Ingresa la confirmación de tu contraseña"
+      />
+      <div
+        class="form-errors"
+        *ngIf="
+          signUpForm.controls['passwordConfirmation'].invalid &&
+          (signUpForm.controls['passwordConfirmation'].dirty ||
+            signUpForm.controls['passwordConfirmation'].touched)
+        "
+      >
+        <div
+          *ngIf="signUpForm.controls['passwordConfirmation'].errors['required']"
+        >
+          La confirmación de contraseña es obligatoria
+        </div>
+        <div
+          *ngIf="
+            signUpForm.controls['passwordConfirmation'].errors['minlength']
+          "
+        >
+          La confirmación de contraseña debe tener al menos 8 caracteres
+        </div>
+        <div
+          *ngIf="
+            signUpForm.controls['passwordConfirmation'].errors['maxlength']
+          "
+        >
+          La confirmación de contraseña debe tener como máximo 20 caracteres
+        </div>
+        <div
+          *ngIf="
+            signUpForm.controls['passwordConfirmation'].errors[
+              'passwordMismatch'
+            ]
+          "
+        >
+          Las contraseñas deben coincidir
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="actions">
+    <button class="circle" [disabled]="step === 1" (click)="previousStep()">
+      <!-- Back button bootstrap icon -->
+      <i class="bi bi-arrow-left"></i>
+    </button>
+    <button [ngClass]="{ circle: step < lastStep }" (click)="nextStep()">
+      <ng-container *ngIf="step < lastStep; else confirmTemplate">
+        <i class="bi bi-arrow-right"></i>
+      </ng-container>
+      <ng-template #confirmTemplate>
+        <span>Confirmar</span>
+      </ng-template>
+    </button>
+  </div>
+</form>

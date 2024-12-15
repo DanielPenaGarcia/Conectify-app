@@ -1,0 +1,67 @@
+aside {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--background-color);
+  height: 100%;
+  gap: 10px;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+  border-right: 1px solid var(--border-color);
+}
+
+aside > .aside-header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  font-size: 1.5rem;
+  background-color: var(--primary-color);
+  color: var(--primary-color-contrast);
+  font-weight: bold;
+}
+
+ul {
+  list-style: none;
+  padding: 0 15px 0 0; /* Padding ajustado */
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.btn-item {
+  position: relative;
+  left: -5px; /* Desplazamiento inicial */
+  width: 100%;
+  padding: 10px;
+  margin-right: 5px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: var(--primary-color);
+  background-color: var(--background-color);
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s ease;
+  font-weight: 600;
+  border-radius: 0 20px 20px 0;
+  color: rgba(var(--primary-color-rgb), 0.7);
+
+  &:hover {
+    background-color: var(--primary-color);
+    color: var(--primary-color-contrast);
+    transform: translateX(5px); /* Efecto de desplazamiento */
+  }
+}
+
+.btn-item > i {
+  font-size: 1.5rem;
+}
+
+.btn-item.active {
+  background-color: rgba(var(--primary-color-rgb), 0.1);
+  color: var(--primary-color);
+  border: 1px solid var(--primary-color-tint); /* Indicador de estado activo */
+  border-left: none;
+  font-weight: bold;
+  transform: translateX(5px); /* Desplazamiento activo */
+}

@@ -1,0 +1,174 @@
+@import url("theme.scss");
+// *
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+// Body
+body {
+  //Background
+  background: var(--background-color);
+  color: var(--primary-color);
+  font-family: "Dosis", sans-serif;
+}
+
+//Main
+main {
+  margin: 0 auto;
+}
+
+.text-center {
+  text-align: center;
+}
+
+// Button
+button {
+  border: 1px solid var(--primary-color);
+  border-radius: 0.25rem;
+  background-color: var(--background-color);
+  color: var(--primary-color);
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+
+  // Estilos comunes para el estado disabled
+  &:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+
+  &:hover {
+    background-color: var(--primary-color);
+    color: var(--primary-color-contrast);
+  }
+
+  &:focus {
+    outline: none !important;
+    box-shadow: 0 0 0 3px var(--primary-color-contrast); /* Efecto de foco */
+  }
+
+  &:active {
+    transform: scale(0.99);
+  }
+
+  &.block {
+    display: block;
+    width: 100%;
+  }
+
+  &.circle {
+    border-radius: 9999px;
+    padding: 0.5rem;
+  }
+
+  &.btn-icon {
+    padding: 0.5rem 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+  }
+
+  &.btn-link {
+    background-color: transparent;
+    border: none;
+    color: var(--primary-color);
+    padding: 0;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  /* Agrupar los estilos comunes para el enfoque */
+  &:focus,
+  &.circle:focus,
+  &.btn-icon:focus,
+  &.btn-link:focus {
+    outline: none;
+    box-shadow: none;
+  }
+}
+
+//Form
+form {
+  padding: 1rem;
+}
+
+form > .step {
+  display: flex;
+  flex-direction: column;
+}
+
+//Form group
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin: 10px 0;
+}
+
+.form-group > label {
+  font-size: 1.25rem;
+}
+
+.form-group > input {
+  padding: 0.5rem;
+  font-size: 1rem;
+  border: 1px solid var(--primary-color);
+  border-radius: 0.25rem;
+  background-color: var(--background-color);
+  color: var(--primary-color-tint);
+  transition: all 0.2s ease;
+  &:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px var(--primary-color-contrast);
+  }
+  &::placeholder {
+    color: rgba(var(--primary-color-rgb), 0.5);
+  }
+}
+
+.form-errors {
+  font-family: "Dosis", sans-serif;
+  color: var(--error-color);
+  font-size: 0.875rem;
+}
+
+//Card
+.card {
+  background-color: var(--background-color);
+  border: 1px solid var(--primary-color);
+  border-radius: 0.25rem;
+  padding: 1rem;
+  margin: 1rem 0;
+}
+
+//Card title
+.card > h2 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  font-weight: 400;
+}
+
+//Card content
+.card > p {
+  font-size: 1rem;
+}
+
+//Card actions
+.card > .actions {
+  display: flex;
+  gap: 1rem;
+  justify-content: flex-end;
+}
+
+.card > .footer {
+  font-size: 0.875rem;
+  color: var(--primary-color-tint);
+  margin-top: 1rem;
+}

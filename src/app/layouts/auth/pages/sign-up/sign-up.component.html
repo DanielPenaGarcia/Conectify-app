@@ -1,1 +1,19 @@
-<p>sign-up works!</p>
+<div class="card">
+  <h2 class="text-center">Registrate en <b>Conectify</b></h2>
+  <form-sign-up (success)="signUpSuccess()"></form-sign-up>
+  <div class="actions">
+    <button class="google-sync block btn-icon">
+      <i class="bi bi-google"></i>
+      <span>Regístrate con Google</span>
+    </button>
+    <button class="facebook-sync block btn-icon">
+      <i class="bi bi-facebook"></i>
+      <span>Regístrate con Facebook</span>
+    </button>
+  </div>
+  <div class="footer">
+    <button class="btn-link block"(click)="goToSignIn()">
+      <span class="text-center">¿Ya tienes una cuenta?</span>
+    </button>
+  </div>
+</div>

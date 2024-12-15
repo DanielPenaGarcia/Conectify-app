@@ -1,0 +1,15 @@
+.actions {
+  display: flex;
+  gap: 1rem;
+  justify-content: space-evenly;
+  margin: 1rem 0;
+}
+
+.step {
+  display: none;
+  transition: all 0.3s ease;
+}
+
+.active {
+  display: block;
+}

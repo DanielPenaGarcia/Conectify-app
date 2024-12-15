@@ -1,0 +1,35 @@
+.dark-theme {
+  --background-color: #010b19;
+  --primary-color: #9be458;
+  --primary-color-rgb: 155,228,88;
+	--primary-color-contrast: #010b19;
+	--primary-color-contrast-rgb: 1,11,25;
+	--primary-color-shade: #88c94d;
+	--primary-color-tint: #a5e769;
+
+  //Error
+  --error-color: #ff3838;
+	--error-color-rgb: 255,56,56;
+	--error-color-contrast: #000000;
+	--error-color-contrast-rgb: 0,0,0;
+	--error-color-shade: #e03131;
+	--error-color-tint: #ff4c4c;
+}
+
+.white-theme {
+  --background-color: #ffffff;
+	--primary-color: #0054e9;
+	--primary-color-rgb: 0,84,233;
+	--primary-color-contrast: #ffffff;
+	--primary-color-contrast-rgb: 255,255,255;
+	--primary-color-shade: #004acd;
+	--primary-color-tint: #1a65eb;
+
+  //Error
+  --error-color: #ff3838;
+  --error-color-rgb: 255,56,56;
+  --error-color-contrast: #000000;
+  --error-color-contrast-rgb: 0,0,0;
+  --error-color-shade: #e03131;
+  --error-color-tint: #ff4c4c;
+}

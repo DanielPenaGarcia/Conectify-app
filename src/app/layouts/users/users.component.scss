@@ -1,0 +1,22 @@
+/* Estilo del contenedor principal */
+.layout {
+  display: flex;
+  height: 100vh; /* Ocupa toda la altura de la ventana */
+  overflow: hidden; /* Evita el desbordamiento */
+}
+
+/* Estilo del aside */
+.side-menu {
+  width: 300px; /* Ajusta el ancho según sea necesario */
+  background-color: #f4f4f4; /* Color de fondo opcional */
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1); /* Sombra opcional */
+  flex-shrink: 0; /* Evita que el aside cambie de tamaño */
+}
+
+/* Estilo del main */
+.main-content {
+  flex: 1; /* Hace que el main ocupe todo el espacio disponible */
+  overflow-y: auto; /* Permite scroll vertical si el contenido es extenso */
+  padding: 20px; /* Espaciado interno opcional */
+  background-color: #fff; /* Fondo opcional */
+}
