@@ -1,22 +1,22 @@
-/* Estilo del contenedor principal */
-.layout {
+// <div class="side-layout">
+//   <side-menu class=""></side-menu>
+//   <main class="main-content">
+//     <router-outlet></router-outlet>
+//   </main>
+// </div>
+
+.side-layout {
   display: flex;
-  height: 100vh; /* Ocupa toda la altura de la ventana */
-  overflow: hidden; /* Evita el desbordamiento */
+  height: 100vh;
 }
 
-/* Estilo del aside */
-.side-menu {
-  width: 300px; /* Ajusta el ancho según sea necesario */
-  background-color: #f4f4f4; /* Color de fondo opcional */
-  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1); /* Sombra opcional */
-  flex-shrink: 0; /* Evita que el aside cambie de tamaño */
+side-menu {
+  width: fit-content;
+  min-width: 250px;
+  height: 100%;
 }
-
-/* Estilo del main */
-.main-content {
-  flex: 1; /* Hace que el main ocupe todo el espacio disponible */
-  overflow-y: auto; /* Permite scroll vertical si el contenido es extenso */
-  padding: 20px; /* Espaciado interno opcional */
-  background-color: #fff; /* Fondo opcional */
+main {
+  flex: 1;
+  padding: 1rem;
+  overflow-y: auto;
 }

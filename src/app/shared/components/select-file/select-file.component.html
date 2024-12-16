@@ -1,0 +1,14 @@
+<div class="file-input-wrapper">
+  <button (click)="openFileInput()" [ngClass]="{ 'btn-icon': icon }">
+    <span>{{ label }}</span>
+    <i [ngClass]="icon"></i>
+  </button>
+  <input
+  type="file"
+  id="file-input"
+  [accept]="accept"
+  [multiple]="multiple"
+  [disabled]="disabled"
+  (change)="onFileChange($event)"
+/>
+</div>

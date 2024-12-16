@@ -1,7 +1,12 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { MenuItem } from './side-menu.types';
-import { ActivatedRoute, NavigationEnd, Router, UrlSegment } from '@angular/router';
+import {
+  ActivatedRoute,
+  NavigationEnd,
+  Router,
+  UrlSegment,
+} from '@angular/router';
 
 @Component({
   selector: 'side-menu',
@@ -14,7 +19,10 @@ export class SideMenuComponent {
   items: MenuItem[] = [];
 
   //Add routerActive
-  constructor(private readonly router: Router, private readonly routerActive: ActivatedRoute) {
+  constructor(
+    private readonly router: Router,
+    private readonly routerActive: ActivatedRoute
+  ) {
     this.items = this.initItems();
     this.onActive();
   }
@@ -22,14 +30,25 @@ export class SideMenuComponent {
   initItems(): MenuItem[] {
     return [
       {
-        title: 'Crear Cuenta',
-        icon: 'bi bi-person-fill-add',
-        route: '/home/accounts/create',
+        title: 'Cuentas',
+        icon: 'account_circle',
+        children: [
+          {
+            title: 'Crear Cuenta',
+            icon: 'bi bi-person-fill-add',
+            route: '/home/accounts/create',
+          },
+          {
+            title: 'Mis cuentas',
+            icon: 'bi bi-people-fill',
+            route: '/home/accounts/dashboard',
+          },
+        ],
       },
       {
-        title: 'Mis cuentas',
-        icon: 'bi bi-people-fill',
-        route: '/home/accounts/dashboard',
+        title: 'Configuración',
+        icon: 'bi bi-gear-fill',
+        route: '/home/settings',
       },
     ];
   }
@@ -38,11 +57,18 @@ export class SideMenuComponent {
     this.router.events.subscribe((event) => {
       if (event instanceof NavigationEnd) {
         this.items = this.items.map((item) => {
-          item.active = this.router.url.includes(item.route);
+          item.active = this.router.url.includes(item.route || '');
+          if (item.children) {
+            item.children = item.children.map((child) => {
+              child.active = this.router.url.includes(child.route || '');
+              return child;
+            });
+            item.active = item.children.some((child) => child.active);
+          }
           return item;
         });
       }
-    })
+    });
   }
 
   navigate(route: string, replace?: boolean): void {

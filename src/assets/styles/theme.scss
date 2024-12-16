@@ -1,35 +1,120 @@
 .dark-theme {
   --background-color: #010b19;
   --primary-color: #9be458;
-  --primary-color-rgb: 155,228,88;
-	--primary-color-contrast: #010b19;
-	--primary-color-contrast-rgb: 1,11,25;
-	--primary-color-shade: #88c94d;
-	--primary-color-tint: #a5e769;
+  --primary-color-rgb: 155, 228, 88;
+  --primary-color-contrast: #010b19;
+  --primary-color-contrast-rgb: 1, 11, 25;
+  --primary-color-shade: #88c94d;
+  --primary-color-tint: #a5e769;
 
   //Error
   --error-color: #ff3838;
-	--error-color-rgb: 255,56,56;
-	--error-color-contrast: #000000;
-	--error-color-contrast-rgb: 0,0,0;
-	--error-color-shade: #e03131;
-	--error-color-tint: #ff4c4c;
+  --error-color-rgb: 255, 56, 56;
+  --error-color-contrast: #000000;
+  --error-color-contrast-rgb: 0, 0, 0;
+  --error-color-shade: #e03131;
+  --error-color-tint: #ff4c4c;
+}
+
+.chatgpt-theme-version1 {
+  --background-color: #121212;
+  --primary-color: #3498db;
+  --primary-color-rgb: 52, 152, 219;
+  --primary-color-contrast: #ffffff;
+  --primary-color-contrast-rgb: 255, 255, 255;
+  --primary-color-shade: #2c81c4;
+  --primary-color-tint: #5ba6de;
+
+  --error-color: #e74c3c;
+  --error-color-rgb: 231, 76, 60;
+  --error-color-contrast: #ffffff;
+  --error-color-contrast-rgb: 255, 255, 255;
+  --error-color-shade: #c44435;
+  --error-color-tint: #eb6a59;
+}
+
+.chatgpt-theme-version2 {
+  --background-color: #222831;
+  --primary-color: #00adb5;
+  --primary-color-rgb: 0, 173, 181;
+  --primary-color-contrast: #ffffff;
+  --primary-color-contrast-rgb: 255, 255, 255;
+  --primary-color-shade: #009a9f;
+  --primary-color-tint: #33bdc2;
+
+  --error-color: #ff5722;
+  --error-color-rgb: 255, 87, 34;
+  --error-color-contrast: #ffffff;
+  --error-color-contrast-rgb: 255, 255, 255;
+  --error-color-shade: #e64a19;
+  --error-color-tint: #ff7043;
+}
+
+.chatgpt-theme-version3 {
+  --background-color: #1c1c1c;
+  --primary-color: #9c27b0;
+  --primary-color-rgb: 156, 39, 176;
+  --primary-color-contrast: #ffffff;
+  --primary-color-contrast-rgb: 255, 255, 255;
+  --primary-color-shade: #871d9e;
+  --primary-color-tint: #ad5dbf;
+
+  --error-color: #f44336;
+  --error-color-rgb: 244, 67, 54;
+  --error-color-contrast: #ffffff;
+  --error-color-contrast-rgb: 255, 255, 255;
+  --error-color-shade: #d73a4b;
+  --error-color-tint: #f66263;
+}
+
+.chatgpt-theme-version4 {
+  --background-color: #2e2e2e;
+  --primary-color: #4caf50;
+  --primary-color-rgb: 76, 175, 80;
+  --primary-color-contrast: #ffffff;
+  --primary-color-contrast-rgb: 255, 255, 255;
+  --primary-color-shade: #439a46;
+  --primary-color-tint: #66bb6a;
+
+  --error-color: #e91e63;
+  --error-color-rgb: 233, 30, 99;
+  --error-color-contrast: #ffffff;
+  --error-color-contrast-rgb: 255, 255, 255;
+  --error-color-shade: #c2185b;
+  --error-color-tint: #ec407a;
+}
+
+.chatgpt-theme-version5 {
+  --background-color: #0f172a;
+  --primary-color: #ffb703;
+  --primary-color-rgb: 255, 183, 3;
+  --primary-color-contrast: #000000;
+  --primary-color-contrast-rgb: 0, 0, 0;
+  --primary-color-shade: #e6a702;
+  --primary-color-tint: #ffc533;
+
+  --error-color: #ef233c;
+  --error-color-rgb: 239, 35, 60;
+  --error-color-contrast: #ffffff;
+  --error-color-contrast-rgb: 255, 255, 255;
+  --error-color-shade: #d32032;
+  --error-color-tint: #f05263;
 }
 
 .white-theme {
   --background-color: #ffffff;
-	--primary-color: #0054e9;
-	--primary-color-rgb: 0,84,233;
-	--primary-color-contrast: #ffffff;
-	--primary-color-contrast-rgb: 255,255,255;
-	--primary-color-shade: #004acd;
-	--primary-color-tint: #1a65eb;
+  --primary-color: #0054e9;
+  --primary-color-rgb: 0, 84, 233;
+  --primary-color-contrast: #ffffff;
+  --primary-color-contrast-rgb: 255, 255, 255;
+  --primary-color-shade: #004acd;
+  --primary-color-tint: #1a65eb;
 
   //Error
   --error-color: #ff3838;
-  --error-color-rgb: 255,56,56;
+  --error-color-rgb: 255, 56, 56;
   --error-color-contrast: #000000;
-  --error-color-contrast-rgb: 0,0,0;
+  --error-color-contrast-rgb: 0, 0, 0;
   --error-color-shade: #e03131;
   --error-color-tint: #ff4c4c;
 }

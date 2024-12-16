@@ -16,6 +16,6 @@ export class AppComponent implements OnInit {
   constructor(private themeService: ThemeService) {}
 
   ngOnInit(): void {
-    this.themeService.setTheme('dark-theme');
+    this.themeService.setTheme('chatgpt-theme-version5');
   }
 }

@@ -1,33 +1,34 @@
-<aside>
-  <div class="aside-header">
-    <h2>Conectify</h2>
-  </div>
-  <nav>
-    <ul>
-      <li *ngFor="let item of items" class="item">
-        <ng-container *ngIf="item.children; else notChildren">
-          <ul>
-            <li *ngFor="let children of item.children">
+<aside class="aside-content">
+  <!-- Header -->
+  <header class="title-app">
+    <h1 class="title">Conectify</h1>
+  </header>
+  <!-- Nav Menu -->
+  <nav class="menu-list">
+    <ul class="items-list">
+      <li class="item" *ngFor="let item of items">
+        <ng-container *ngIf="!item.children; else parent">
+          <button class="btn-item" [ngClass]="{ active: item.active }">
+            {{ item.title }}
+            <i [ngClass]="item.icon"></i>
+          </button>
+        </ng-container>
+        <ng-template #parent>
+          <div class="parent-title">
+            <span class="title-list">{{ item.title }}</span>
+            <hr class="divisor" />
+          </div>
+          <ul class="items-list">
+            <li class="item" *ngFor="let child of item.children">
               <button
-                class="btn-item"
-                [ngClass]="{ active: children.active }"
-                (click)="navigate(children.route, children.replace)"
+                class="btn-item children"
+                [ngClass]="{ active: child.active }"
               >
-                <span>{{ children.title }}</span>
-                <i [ngClass]="children.icon"></i>
+                {{ child.title }}
+                <i [ngClass]="child.icon"></i>
               </button>
             </li>
           </ul>
-        </ng-container>
-        <ng-template #notChildren>
-          <button
-            class="btn-item"
-            [ngClass]="{ active: item.active }"
-            (click)="navigate(item.route, item.replace)"
-          >
-            <span>{{ item.title }}</span>
-            <i [ngClass]="item.icon"></i>
-          </button>
         </ng-template>
       </li>
     </ul>
